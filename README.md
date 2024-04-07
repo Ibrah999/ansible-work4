@@ -1,2 +1,2 @@
 # ansible-work4
-infor
+info
