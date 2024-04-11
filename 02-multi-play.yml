@@ -1,0 +1,47 @@
+---
+- name: update N1 servers
+  hosts: N1
+ 
+  tasks:
+    - name: create directory
+      file:
+        path: /home/centos/new_dir
+        state: directory
+
+    - name: create directory
+      file:
+        path: /home/centos/new_dir_1
+        state: directory  
+
+- name: update N2 servers
+  hosts: N2
+ 
+  tasks:
+    - name: create directory
+      file:
+        path: /home/centos/new_dir_1
+        state: directory
+
+      - name: create directory
+      file:
+        path: /home/centos/new_dir_2
+        state: directory 
+
+- name: update group1 servers
+  hosts: g1
+ 
+  tasks:
+    - name: create directory
+      file:
+        path: /home/centos/new_dir_group1
+        state: directory 
+
+    - name: create directory
+      file:
+        path: /home/centos/new_dir_group2
+        state: directory 
+
+...
+
+
+
