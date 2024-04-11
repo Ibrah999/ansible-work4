@@ -1,3 +1,4 @@
+# ansible N1 -m file -a "path=/home/centos/N1_dir state=directory"
 ---
 - name: update N1 servers
   hosts: N1
