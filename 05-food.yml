@@ -1,0 +1,20 @@
+---
+- name: Deploy web app
+  hosts: N3
+  become: yes 
+
+  tasks:
+  - name: install GIT
+    yum:
+      name: git
+      state: present
+
+  - name: Host Code
+    git:
+      repo: https://github.com/CeeyIT-Solutions/ecomm-3.git
+      dest: /var/www/html      
+...
+
+
+
+
