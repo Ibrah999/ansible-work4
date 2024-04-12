@@ -1,6 +1,6 @@
 ---
 - name: install Apache2 server
-  hosts: N1
+  hosts: n1
   become: yes 
 
   tasks:
