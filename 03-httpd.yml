@@ -4,17 +4,17 @@
  become: yes 
 
   tasks:
-    - name: install HTTPD
+  - name: install HTTPD
       yum:
         name: httpd
         state: present
 
-    - name: start httpd
+  - name: start httpd
       service:
         name: httpd
         state: started
 
-    - name: enable Httpd
+  - name: enable Httpd
       service:
         name: httpd
         enbaled: yes           
