@@ -7,14 +7,14 @@
     - name: install HTTPD
       yum:
         name: httpd
-        state: directory
+        state: present
 
     - name: start httpd
       service:
         name: httpd
         state: started
 
-    - name: enable httpd
+    - name: enable Httpd
       service:
         name: httpd
         enbaled: yes           
