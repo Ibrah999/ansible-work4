@@ -1,15 +1,15 @@
 ---
-- name: install Apache2 server
+- name: Install Apache2 server
   hosts: N1
   become: yes 
 
   tasks:
-  - name: install Apache2
+  - name: Install Apache2
     apt:
       name: apache2
       state: present
 
-  - name: start apache2
+  - name: Start apache2
     service:
       name: httpd
       state: started
